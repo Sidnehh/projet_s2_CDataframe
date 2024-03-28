@@ -5,6 +5,8 @@ struct COLUMN
 {
     char titre[50];
     int* T;
+    int TL;
+    int TP;
 };
 
 //PARTIE SABRINA
