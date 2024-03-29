@@ -1,15 +1,20 @@
 #ifndef PROJET_S2_CDATAFRAME_FONCTIONSCOLONNES_H
 #define PROJET_S2_CDATAFRAME_FONCTIONSCOLONNES_H
 
-struct COLUMN
+typedef struct
 {
-    char titre[50];
-    int* T;
-    int TL;
-    int TP;
-};
+    char *titre;
+    int *tableau_data;
+    int taille_logique;
+    int taille_physique;
+} COLUMN;
+//fonction qui crée une colonne vide
+COLUMN *create_column(char* titre);
+//fonction qui insère une valeur dans la colonne
+int insert_value(COLUMN* col, int value);
+//fonction qui vide la colonne
+void delete_column(COLUMN **col);
 
-//PARTIE SABRINA
 
 //PARTIE SIDNEY
 
