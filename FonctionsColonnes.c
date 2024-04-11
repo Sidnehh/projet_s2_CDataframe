@@ -6,6 +6,7 @@
 
 // 1 - fonction qui crée une colonne vide
 
+
 COLUMN *create_column(char* titre)
 {
     int longueur_titre = strlen(titre);
@@ -76,47 +77,47 @@ void delete_column(COLUMN **col)
 
 //PARTIE SIDNEY
 
-void Print_col(struct COLUMN* col)
+void Print_col(COLUMN* col)
 {
     int i;
-    for(i=0; i<col->TL; i++)
+    for(i=0; i<col->taille_logique; i++)
     {
-        printf("[%d] %d", i, col->T[i]);
+        printf("[%d] %d", i, col->tableau_data[i]);
     }
     printf("\n");
 }
 
-int Frequency(struct COLUMN* col, int val)
+int Frequency(COLUMN* col, int val)
 {
     int i, sum=0;
-    for(i=0; i<col->TL; i++)
+    for(i=0; i<col->taille_logique; i++)
     {
-        sum += (col->T[i] == val);
+        sum += (col->tableau_data[i] == val);
     }
     return sum;
 }
 
-int Val_From_Id(struct COLUMN* col, int id)
+int Val_From_Id(COLUMN* col, int id)
 {
-    return col->T[id];
+    return col->tableau_data[id];
 }
 
-int Nb_Superior(struct COLUMN* col, int val)
+int Nb_Superior(COLUMN* col, int val)
 {
     int i, sum=0;
-    for(i=0; i<col->TL; i++)
+    for(i=0; i<col->taille_logique; i++)
     {
-        sum += (col->T[i] > val);
+        sum += (col->tableau_data[i] > val);
     }
     return sum;
 }
 
-int Nb_Inferior(struct COLUMN* col, int val)
+int Nb_Inferior(COLUMN* col, int val)
 {
     int i, sum=0;
-    for(i=0; i<col->TL; i++)
+    for(i=0; i<col->taille_logique; i++)
     {
-        sum += (col->T[i] < val);
+        sum += (col->tableau_data[i] < val);
     }
     return sum;
 }
