@@ -9,7 +9,7 @@ COLUMN** create_empty_cdataframe(int TL)
     COLUMN**cdf = malloc(TL*sizeof(COLUMN*));
     for(i=0;i<TL;i++)
     {
-        printf("Entrez titre de la colonne %d \n", i+1);
+        printf("Entrez titre de la colonne %d : \n", i+1);
         scanf("%s", temp);
         cdf[i] = create_column(temp);
     }
@@ -27,11 +27,11 @@ void fill_cdataframe(COLUMN** cdf, int TL)
     for(i=0;i<TL;i++)
     {
         printf("Colonne : %s \n", cdf[i]->titre);
-        printf("Entrez nombre de valeurs à insérer: \n");
+        printf("Entrez nombre de valeurs à insérer : \n");
         scanf("%d", &cdf[i]->taille_logique);
         for(j=0;j<n;j++)
         {
-            printf("Entrez valeur %d à insérer de la colonne %s", j+1, cdf[i]->titre);
+            printf("Entrez valeur %d à insérer de la colonne %s : \n", j+1, cdf[i]->titre);
             scanf(" %d", &temp);
             insert_value(cdf[i], temp);
         }
