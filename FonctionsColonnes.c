@@ -74,9 +74,6 @@ void delete_column(COLUMN **col)
     *col = NULL;  // Mettre le pointeur sur la colonne à NULL
 }
 
-
-//PARTIE SIDNEY
-
 void Print_col(COLUMN* col)
 {
     int i;
