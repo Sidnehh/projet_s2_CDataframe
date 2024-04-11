@@ -6,4 +6,6 @@ set(CMAKE_C_STANDARD 11)
 add_executable(projet_s2_CDataframe
         main.c
         FonctionsColonnes.h
-        FonctionsColonnes.c)
+        FonctionsColonnes.c
+        FonctionsCDataFrame.h
+        FonctionsCDataFrame.c)

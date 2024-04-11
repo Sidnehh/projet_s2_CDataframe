@@ -26,7 +26,7 @@ COLUMN *create_column(char* titre)
         return NULL;
     }
 
-    // copie du titre dans l'espaace alloué y compris '\0'
+    // copie du titre dans l'espace alloué y compris '\0'
     strcpy(column->titre, titre);
 
     // initialisation des autres attributs de column

@@ -61,6 +61,12 @@ build CMakeFiles/projet_s2_CDataframe.dir/FonctionsColonnes.c.obj: C_COMPILER__p
   OBJECT_DIR = CMakeFiles\projet_s2_CDataframe.dir
   OBJECT_FILE_DIR = CMakeFiles\projet_s2_CDataframe.dir
 
+build CMakeFiles/projet_s2_CDataframe.dir/FonctionsCDataFrame.c.obj: C_COMPILER__projet_s2_CDataframe_unscanned_Debug C$:/Users/Sidne/CLionProjects/projet_s2_CDataframe/FonctionsCDataFrame.c || cmake_object_order_depends_target_projet_s2_CDataframe
+  DEP_FILE = CMakeFiles\projet_s2_CDataframe.dir\FonctionsCDataFrame.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\projet_s2_CDataframe.dir
+  OBJECT_FILE_DIR = CMakeFiles\projet_s2_CDataframe.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target projet_s2_CDataframe
@@ -69,7 +75,7 @@ build CMakeFiles/projet_s2_CDataframe.dir/FonctionsColonnes.c.obj: C_COMPILER__p
 #############################################
 # Link the executable projet_s2_CDataframe.exe
 
-build projet_s2_CDataframe.exe: C_EXECUTABLE_LINKER__projet_s2_CDataframe_Debug CMakeFiles/projet_s2_CDataframe.dir/main.c.obj CMakeFiles/projet_s2_CDataframe.dir/FonctionsColonnes.c.obj
+build projet_s2_CDataframe.exe: C_EXECUTABLE_LINKER__projet_s2_CDataframe_Debug CMakeFiles/projet_s2_CDataframe.dir/main.c.obj CMakeFiles/projet_s2_CDataframe.dir/FonctionsColonnes.c.obj CMakeFiles/projet_s2_CDataframe.dir/FonctionsCDataFrame.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\projet_s2_CDataframe.dir
