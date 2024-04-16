@@ -41,9 +41,11 @@ COLUMN *create_column(char* titre)
 int insert_value(COLUMN* col, int value)
 {
     if (col==NULL)
+    {
         return 0; // arrêt si col vaut NULL
+    }
     // augmentation de la mémoire du tableau et donc de la taille physique du tableau si la taille logique et physique sont égales
-    if (col->taille_physique== col->taille_logique)
+    if (col->taille_physique == col->taille_logique)
     {
         int nouvelle_taille_physique = col->taille_physique + REALOC_SIZE;
         int * temp = (int *) realloc(col->tableau_data, nouvelle_taille_physique); // variable temporaire pour éviter de perdre les données en cas de problème avec realloc
@@ -55,7 +57,9 @@ int insert_value(COLUMN* col, int value)
         col->tableau_data[col->taille_logique++] = value; // ajout de la valeur dans le tableau
     }
     else
+    {
         col->tableau_data[col->taille_logique++] = value; // ajout de la valeur dans le tableau si pas de problème de place
+    }
 
     return 1;
 

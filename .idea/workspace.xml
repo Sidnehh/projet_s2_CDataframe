@@ -21,10 +21,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73ddcb3-4814-4204-a4cd-78b92205e06d" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FonctionsCDataFrame.c" beforeDir="false" afterPath="$PROJECT_DIR$/FonctionsCDataFrame.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FonctionsCDataFrame.h" beforeDir="false" afterPath="$PROJECT_DIR$/FonctionsCDataFrame.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FonctionsColonnes.c" beforeDir="false" afterPath="$PROJECT_DIR$/FonctionsColonnes.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsCDataFrame.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsCDataFrame.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsColonnes.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsColonnes.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/projet_s2_CDataframe.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/projet_s2_CDataframe.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,16 +88,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="projet_s2_CDataframe" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projet_s2_CDataframe" TARGET_NAME="projet_s2_CDataframe" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projet_s2_CDataframe" RUN_TARGET_NAME="projet_s2_CDataframe">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -109,7 +111,16 @@
       <workItem from="1711637143276" duration="918000" />
       <workItem from="1711660186254" duration="2623000" />
       <workItem from="1712833487336" duration="4000" />
-      <workItem from="1712868445964" duration="5395000" />
+      <workItem from="1712868445964" duration="5545000" />
+      <workItem from="1712913039421" duration="599000" />
+      <workItem from="1713272808271" duration="313000" />
+      <workItem from="1713273398493" duration="2000" />
+      <workItem from="1713273799950" duration="227000" />
+      <workItem from="1713274037620" duration="1000" />
+      <workItem from="1713274068038" duration="1000" />
+      <workItem from="1713274186163" duration="2000" />
+      <workItem from="1713274297888" duration="510000" />
+      <workItem from="1713274883505" duration="8660000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
