@@ -122,3 +122,7 @@ int Nb_Inferior(COLUMN* col, int val)
     }
     return sum;
 }
+
+//PARTIE 5.1
+
+//PARTIE 6

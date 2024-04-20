@@ -16,9 +16,6 @@ int insert_value(COLUMN* col, int value);
 //fonction qui vide la colonne
 void delete_column(COLUMN **col);
 
-
-//PARTIE SIDNEY
-
 void Print_col(COLUMN* col);
 int Frequency(COLUMN* col, int val);
 int Val_From_Id(COLUMN* col, int id);
