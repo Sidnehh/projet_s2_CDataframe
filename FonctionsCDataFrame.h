@@ -11,3 +11,8 @@ void print_columns_cdataframe(COLUMN** cdf, int TL, int ncol);
 void add_col_cdataframe(COLUMN** cdf, int TL, COLUMN* col);
 void del_col_cdataframe(COLUMN** cdf, int TL);
 #endif //PROJET_S2_CDATAFRAME_FONCTIONSCDATAFRAME_H
+
+
+//PARTIE 5.1
+
+//PARTIE 6
