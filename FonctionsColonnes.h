@@ -22,4 +22,8 @@ int Val_From_Id(COLUMN* col, int id);
 int Nb_Superior(COLUMN* col, int val);
 int Nb_Inferior(COLUMN* col, int val);
 
+//Partie 5.1
+
+//Partie 6
+
 #endif //PROJET_S2_CDATAFRAME_FONCTIONSCOLONNES_H
