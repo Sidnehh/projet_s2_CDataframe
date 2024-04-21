@@ -125,6 +125,19 @@ int Nb_Inferior(COLUMN* col, int val)
     return sum;
 }
 
+void fill_column(COLUMN* col)
+{
+    int i, n, temp;
+    printf("Entrez le nombre de valeurs à insérer : \n");
+    scanf("%d", &n);
+    for(i=0; i<n;i++)
+    {
+        printf("Entrez la valeur %d :\n", i+1);
+        scanf("%d", &temp);
+        insert_value(col, temp);
+    }
+}
+
 
 
 //PARTIE 5.1

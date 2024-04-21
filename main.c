@@ -45,24 +45,13 @@ int main() {
             case 2:
                 if (cdf) {
                     COLUMN* new_col = create_column("Nouvelle Colonne");  // Nom fixe pour la simplicité
-                    add_col_cdataframe(cdf, TL, new_col);
-                    TL++;  // Incrémenter la taille logique après l'ajout de la colonne
-
-                    int numValues;
-                    printf("Entrez nombre de valeurs à insérer : \n");
-                    scanf(" %d", &numValues);
-
-                    for (int j = 0; j < numValues; j++) {
-                        int temp;
-                        printf("Entrez valeur %d à insérer : \n", j + 1);
-                        scanf(" %d", &temp);
-
-                        // Supposons que nous ajoutons simplement la valeur à la fin du tableau existant
-                        // en supposant que le tableau est suffisamment grand
-                        new_col->tableau_data[new_col->taille_logique] = temp;
-                        new_col->taille_logique++;
-                    }
-                } else {
+                    printf("Entrez le titre de la colonne :");
+                    scanf("%s", new_col->titre);
+                    fill_column(new_col);
+                    add_col_cdataframe(cdf, &TL, new_col);
+                }
+                else
+                {
                     printf("Veuillez d'abord créer un CDataframe.\n");
                 }
                 break;

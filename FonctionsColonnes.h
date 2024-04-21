@@ -24,6 +24,7 @@ int Frequency(COLUMN* col, int val);
 int Val_From_Id(COLUMN* col, int id);
 int Nb_Superior(COLUMN* col, int val);
 int Nb_Inferior(COLUMN* col, int val);
+void fill_column(COLUMN* col);
 
 //Partie 5.1
 

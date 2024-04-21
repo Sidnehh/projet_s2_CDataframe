@@ -24,18 +24,11 @@ COLUMN** create_empty_cdataframe(int TL)
 
 void fill_cdataframe(COLUMN** cdf, int TL)
 {
-    int i, j, n, temp;
+    int i;
     for(i=0;i<TL;i++)
     {
         printf("Colonne : %s \n", cdf[i]->titre);
-        printf("Entrez nombre de valeurs à insérer : \n");
-        scanf("%d", &n);
-        for(j=0;j<n;j++)
-        {
-            printf("Entrez valeur %d à insérer de la colonne %s : \n", j+1, cdf[i]->titre);
-            scanf(" %d", &temp);
-            insert_value(cdf[i], temp);
-        }
+        fill_column(cdf[i]);
     }
 }
 int maxcol_cdataframe(COLUMN** cdf, int TL)
@@ -115,14 +108,14 @@ void print_columns_cdataframe(COLUMN** cdf, int TL, int ncol)
     }
 }
 
-void add_col_cdataframe(COLUMN** cdf, int TL, COLUMN* col)
+void add_col_cdataframe(COLUMN** cdf, int* TL, COLUMN* col)
 {
-    cdf = realloc(cdf, TL++);
+    cdf = realloc(cdf, (*TL)++);
     if(cdf == NULL)
     {
         free(cdf);
     }
-    cdf[TL] = col;
+    cdf[(*TL)-1] = col;
 }
 
 void add_line_cdataframe(COLUMN** cdf, int TL)
