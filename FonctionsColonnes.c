@@ -33,6 +33,10 @@ COLUMN *create_column(char* titre)
     column->tableau_data = NULL;
     column->taille_logique = 0;
     column->taille_physique = 0;
+    // Initialisation des nouveaux attributs pour le tri
+    column->index = NULL;
+    column->valid_index = 0;
+    column->sort_dir = 0;
 
     return column;
 }
@@ -66,16 +70,14 @@ int insert_value(COLUMN* col, int value)
 }
 //3- fonction qui vide la colonne
 
-void delete_column(COLUMN **col)
-{
-    if ((*col)->tableau_data != NULL) {
-        free((*col)->tableau_data);
-        (*col)->tableau_data = NULL;  // S'assurer de mettre le pointeur à NULL après la liberation
+void delete_column(COLUMN** col_ptr) {
+    if (col_ptr && *col_ptr) {
+        // Libérer la mémoire allouée
+        free((*col_ptr)->titre);
+        free((*col_ptr)->tableau_data);
+        free(*col_ptr);
+        *col_ptr = NULL;
     }
-
-    // Libère la structure de la colonne elle-même.
-    free(*col);
-    *col = NULL;  // Mettre le pointeur sur la colonne à NULL
 }
 
 void Print_col(COLUMN* col)
@@ -122,6 +124,21 @@ int Nb_Inferior(COLUMN* col, int val)
     }
     return sum;
 }
+
+void fill_column(COLUMN* col)
+{
+    int i, n, temp;
+    printf("Entrez le nombre de valeurs à insérer : \n");
+    scanf("%d", &n);
+    for(i=0; i<n;i++)
+    {
+        printf("Entrez la valeur %d :\n", i+1);
+        scanf("%d", &temp);
+        insert_value(col, temp);
+    }
+}
+
+
 
 //PARTIE 5.1
 
