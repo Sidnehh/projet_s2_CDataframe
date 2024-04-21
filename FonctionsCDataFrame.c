@@ -134,3 +134,21 @@ void add_line_cdataframe(COLUMN** cdf, int TL)
     }
 }
 
+
+void delete_column_cdf(COLUMN*** cdataframe, int* TL, int index) {
+    if (cdataframe == NULL || *cdataframe == NULL || index < 0 || index >= *TL) {
+        printf("Erreur: index invalide ou CDataframe non initialisé.\n");
+        exit(EXIT_FAILURE);
+    }
+    // Libére la mémoire de la colonne à l'index spécifié
+    delete_column(&((*cdataframe)[index]));
+    // Décale les colonnes restantes vers la gauche pour remplir l'espace laissé par la suppression
+    for (int i = index; i < (*TL) - 1; i++) {
+        (*cdataframe)[i] = (*cdataframe)[i + 1];
+    }
+    // Réduit le nombre de colonnes
+    (*TL)--;
+    (*cdataframe)[*TL] = NULL;
+}
+
+
