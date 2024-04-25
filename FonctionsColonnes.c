@@ -128,7 +128,7 @@ int Nb_Inferior(COLUMN* col, int val)
 void fill_column(COLUMN* col)
 {
     int i, n, temp;
-    printf("Entrez le nombre de valeurs à insérer : \n");
+    printf("Entrez le nombre de valeurs a insérer : \n");
     scanf("%d", &n);
     for(i=0; i<n;i++)
     {

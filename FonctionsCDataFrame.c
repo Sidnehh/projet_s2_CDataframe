@@ -130,7 +130,7 @@ void add_line_cdataframe(COLUMN** cdf, int TL)
 
 void delete_column_cdf(COLUMN*** cdataframe, int* TL, int index) {
     if (cdataframe == NULL || *cdataframe == NULL || index < 0 || index >= *TL) {
-        printf("Erreur: index invalide ou CDataframe non initialisé.\n");
+        printf("Erreur: index invalide ou CDataframe non initialise.\n");
         exit(EXIT_FAILURE);
     }
     // Libére la mémoire de la colonne à l'index spécifié

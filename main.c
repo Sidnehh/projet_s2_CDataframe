@@ -10,7 +10,7 @@ int main() {
 
     do {
         printf("\n--- Menu CDataframe ---\n");
-        printf("1. Créer, remplir et afficher un CDataframe\n");
+        printf("1. Creer, remplir et afficher un CDataframe\n");
         printf("2. Ajouter une colonne au CDataframe\n");
         printf("3. Supprimer une colonne spécifique du CDataframe\n");
         printf("4. Afficher le CDataframe actuel\n");
@@ -21,7 +21,7 @@ int main() {
         switch(choice) {
             case 1:
                 if (cdf) {
-                    printf("Un CDataframe existe déjà. Voulez-vous en créer un nouveau ?  (1 pour Oui, 0 pour Non): ");
+                    printf("Un CDataframe existe deja. Voulez-vous en creer un nouveau ?  (1 pour Oui, 0 pour Non): ");
                     int confirm;
                     scanf(" %d", &confirm);
                     if (confirm == 1) {
@@ -52,7 +52,7 @@ int main() {
                 }
                 else
                 {
-                    printf("Veuillez d'abord créer un CDataframe.\n");
+                    printf("Veuillez d'abord creer un CDataframe.\n");
                 }
                 break;
 
@@ -60,7 +60,7 @@ int main() {
             case 3:
                 if (cdf && TL > 0) {
                     int colIndex;
-                    printf("Entrez l'indice de la colonne à supprimer (0 à %d) : ", TL - 1);
+                    printf("Entrez l'indice de la colonne a supprimer (0 à %d) : ", TL - 1);
                     scanf(" %d", &colIndex);
                     if (colIndex >= 0 && colIndex < TL) {
                         delete_column_cdf(&cdf, &TL, colIndex);
@@ -68,21 +68,21 @@ int main() {
                         printf("Index invalide.\n");
                     }
                 } else {
-                    printf("Le CDataframe est vide ou aucune colonne à supprimer.\n");
+                    printf("Le CDataframe est vide ou aucune colonne a supprimer.\n");
                 }
                 break;
             case 4:
                 if (cdf && TL > 0) {
                     print_cdataframe(cdf, TL);
                 } else {
-                    printf("Aucun CDataframe à afficher ou le CDataframe est vide.\n");
+                    printf("Aucun CDataframe a afficher ou le CDataframe est vide.\n");
                 }
                 break;
             case 0:
                 printf("Au revoir !\n");
                 break;
             default:
-                printf("Choix invalide, réessayez.\n");
+                printf("Choix invalide, reessayez.\n");
         }
     } while(choice != 0);
 
