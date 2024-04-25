@@ -28,11 +28,11 @@ void fill_cdataframe(COLUMN** cdf, int TL)
     for(i=0;i<TL;i++)
     {
         printf("Colonne : %s \n", cdf[i]->titre);
-        printf("Entrez nombre de valeurs à insérer : \n");
+        printf("Entrez nombre de valeurs a inserer : \n");
         scanf("%d", &n);
         for(j=0;j<n;j++)
         {
-            printf("Entrez valeur %d à insérer de la colonne %s : \n", j+1, cdf[i]->titre);
+            printf("Entrez valeur %d à inserer de la colonne %s : \n", j+1, cdf[i]->titre);
             scanf(" %d", &temp);
             insert_value(cdf[i], temp);
         }
