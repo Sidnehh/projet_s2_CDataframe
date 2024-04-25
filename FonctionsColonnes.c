@@ -39,7 +39,7 @@ int insert_value(COLUMN* col, void* value)
     {
         return 0; // arrêt si col vaut NULL
     }
-    if (col->taille_logique== col->taille_physique)
+    if (col->taille_logique == col->taille_physique)
     {
         int nouvelle_taille = REALOC_SIZE+col->taille_physique;
         COL_TYPE** temp;
@@ -62,6 +62,7 @@ int insert_value(COLUMN* col, void* value)
     switch(col->type)
     {
         case INT:
+            printf("int");
             col->tableau_data[col->taille_logique] = (int *) malloc(sizeof(int));
             *((int*)col->tableau_data[col->taille_logique]) = *((int*)value);
             break;
@@ -72,6 +73,7 @@ int insert_value(COLUMN* col, void* value)
             *((unsigned int*)col->tableau_data[col->taille_logique]) = *((unsigned int*)value);
             break;
         case CHAR:
+            printf("char");
             col->tableau_data[col->taille_logique] = (int *) malloc(sizeof(int));
             *((int*)col->tableau_data[col->taille_logique]) = *((int*)value);
             break;
@@ -93,8 +95,21 @@ int insert_value(COLUMN* col, void* value)
     col->taille_logique++;
 
     return 1;
-
 }
+
+void fill_column(COLUMN* col)
+{
+    int i, n, temp;
+    printf("Entrez le nombre de valeurs a insérer : \n");
+    scanf("%d", &n);
+    for(i=0; i<n;i++)
+    {
+        printf("Entrez la valeur %d :\n", i+1);
+        scanf("%d", &temp);
+        insert_value(col, &temp);
+    }
+}
+
 //3- fonction qui vide la colonne
 
 void delete_column(COLUMN **col)

@@ -21,7 +21,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73ddcb3-4814-4204-a4cd-78b92205e06d" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FonctionsCDataFrame.c" beforeDir="false" afterPath="$PROJECT_DIR$/FonctionsCDataFrame.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FonctionsCDataFrame.h" beforeDir="false" afterPath="$PROJECT_DIR$/FonctionsCDataFrame.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FonctionsColonnes.c" beforeDir="false" afterPath="$PROJECT_DIR$/FonctionsColonnes.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

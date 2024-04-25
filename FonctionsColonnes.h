@@ -45,6 +45,8 @@ int Val_From_Id(COLUMN* col, int id);
 int Nb_Superior(COLUMN* col, int val);
 //fonction qui retourne le nombre de valeurs inférieures à val dans une colonne
 int Nb_Inferior(COLUMN* col, int val);
+//fonction qui remplit une colonne par saisie
+void fill_column(COLUMN* col);
 
 //Partie 5.1
 

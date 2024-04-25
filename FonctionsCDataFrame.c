@@ -12,7 +12,8 @@ COLUMN** create_empty_cdataframe(int TL)
     {
         printf("Entrez titre de la colonne %d : \n", i+1);
         scanf("%s", temp);
-        cdf[i] = create_column(temp);
+        printf("Choisir le type de la colonne : \n");
+        cdf[i] = create_column(INT, temp);
     }
     if(cdf==NULL) // Si l'allocation échoue
     {
@@ -34,7 +35,7 @@ void fill_cdataframe(COLUMN** cdf, int TL)
         {
             printf("Entrez valeur %d à inserer de la colonne %s : \n", j+1, cdf[i]->titre);
             scanf(" %d", &temp);
-            insert_value(cdf[i], temp);
+            insert_value(cdf[i], &temp);
         }
     }
 }
@@ -115,14 +116,14 @@ void print_columns_cdataframe(COLUMN** cdf, int TL, int ncol)
     }
 }
 
-void add_col_cdataframe(COLUMN** cdf, int TL, COLUMN* col)
+void add_col_cdataframe(COLUMN** cdf, int* TL, COLUMN* col)
 {
-    cdf = realloc(cdf, TL++);
+    cdf = realloc(cdf, (*TL)++);
     if(cdf == NULL)
     {
         free(cdf);
     }
-    cdf[TL] = col;
+    cdf[(*TL)-1] = col;
 }
 
 void add_line_cdataframe(COLUMN** cdf, int TL)
