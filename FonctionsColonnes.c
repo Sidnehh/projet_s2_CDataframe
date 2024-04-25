@@ -7,18 +7,12 @@
 // 1 - fonction qui crée une colonne vide
 
 
-COLUMN *create_column(char* titre)
+COLUMN *create_column(ENUM_TYPE type, char* titre)
 {
     int longueur_titre = strlen(titre);
 
     //allocation de mémoire pour la structure COLUMN
     COLUMN *column = (COLUMN *) malloc(sizeof(COLUMN));
-    if (column == NULL) //si l'allocation échoue
-    {
-        free(column);
-        return NULL;
-    }
-
     column->titre = (char *) malloc(longueur_titre + 1); //alloue le titre de la structure
     if (column->titre == NULL) // si l'allocation échoue
     {
@@ -30,6 +24,7 @@ COLUMN *create_column(char* titre)
     strcpy(column->titre, titre);
 
     // initialisation des autres attributs de column
+    column->index = NULL;
     column->tableau_data = NULL;
     column->taille_logique = 0;
     column->taille_physique = 0;
@@ -38,27 +33,43 @@ COLUMN *create_column(char* titre)
 }
 
 // 2- fonction qui insère une valeur dans la colonne
-int insert_value(COLUMN* col, int value)
+int insert_value(COLUMN* col, void* value)
 {
     if (col==NULL)
     {
         return 0; // arrêt si col vaut NULL
     }
-    // augmentation de la mémoire du tableau et donc de la taille physique du tableau si la taille logique et physique sont égales
-    if (col->taille_physique == col->taille_logique)
+    if (col->tableau_data == col->taille_physique)
     {
-        int nouvelle_taille_physique = col->taille_physique + REALOC_SIZE;
-        int * temp = (int *) realloc(col->tableau_data, nouvelle_taille_physique); // variable temporaire pour éviter de perdre les données en cas de problème avec realloc
-        if (temp==NULL)
-            return 0;
+        if(col->taille_physique == 0)
+        {
 
-        col->tableau_data = temp;
-        col->taille_physique = nouvelle_taille_physique; // changement de taille physique
-        col->tableau_data[col->taille_logique++] = value; // ajout de la valeur dans le tableau
+        }
+        else
+        {
+
+        }
     }
-    else
+
+    switch(col->type)
     {
-        col->tableau_data[col->taille_logique++] = value; // ajout de la valeur dans le tableau si pas de problème de place
+        case INT:
+            col.da
+            break;
+        case NULLVAL:
+            break;
+        case UINT:
+            break;
+        case CHAR:
+            break;
+        case FLOAT:
+            break;
+        case DOUBLE:
+            break;
+        case STRING:
+            break;
+        case STRUCTURE: //to do
+            break;
     }
 
     return 1;
