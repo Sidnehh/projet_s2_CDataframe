@@ -39,38 +39,58 @@ int insert_value(COLUMN* col, void* value)
     {
         return 0; // arrêt si col vaut NULL
     }
-    if (col->tableau_data == col->taille_physique)
+    if (col->taille_logique== col->taille_physique)
     {
+        int nouvelle_taille = REALOC_SIZE+col->taille_physique;
+        COL_TYPE** temp;
         if(col->taille_physique == 0)
         {
-
+            temp = malloc(nouvelle_taille);
         }
         else
         {
-
+            temp = realloc(col->tableau_data, nouvelle_taille);
         }
-    }
 
+        if(temp == NULL)
+        {
+            free(temp);
+            return 0;
+        }
+        col->tableau_data = temp;
+    }
     switch(col->type)
     {
         case INT:
-            col.da
+            col->tableau_data[col->taille_logique] = (int *) malloc(sizeof(int));
+            *((int*)col->tableau_data[col->taille_logique]) = *((int*)value);
             break;
-        case NULLVAL:
+        case NULLVAL: //to do
             break;
         case UINT:
+            col->tableau_data[col->taille_logique] = (unsigned int *) malloc(sizeof(unsigned int));
+            *((unsigned int*)col->tableau_data[col->taille_logique]) = *((unsigned int*)value);
             break;
         case CHAR:
+            col->tableau_data[col->taille_logique] = (int *) malloc(sizeof(int));
+            *((int*)col->tableau_data[col->taille_logique]) = *((int*)value);
             break;
         case FLOAT:
+            col->tableau_data[col->taille_logique] = (float *) malloc(sizeof(float));
+            *((float*)col->tableau_data[col->taille_logique]) = *((float*)value);
             break;
         case DOUBLE:
+            col->tableau_data[col->taille_logique] = (double *) malloc(sizeof(double));
+            *((double*)col->tableau_data[col->taille_logique]) = *((double*)value);
             break;
         case STRING:
+            col->tableau_data[col->taille_logique] = (char **) malloc(sizeof(char*));
+            *((char**)col->tableau_data[col->taille_logique]) = *((char**)value);
             break;
         case STRUCTURE: //to do
             break;
     }
+    col->taille_logique++;
 
     return 1;
 
@@ -79,9 +99,15 @@ int insert_value(COLUMN* col, void* value)
 
 void delete_column(COLUMN **col)
 {
-    if ((*col)->tableau_data != NULL) {
+    if ((*col)->tableau_data != NULL)
+    {
         free((*col)->tableau_data);
         (*col)->tableau_data = NULL;  // S'assurer de mettre le pointeur à NULL après la liberation
+    }
+    if((*col)->index != NULL)
+    {
+        free((*col)->index);
+        (*col)->index = NULL;
     }
 
     // Libère la structure de la colonne elle-même.
