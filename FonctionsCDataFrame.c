@@ -123,6 +123,7 @@ void add_col_cdataframe(COLUMN** cdf, int* TL, COLUMN* col)
     {
         free(cdf);
     }
+    printf("%d", *TL);
     cdf[(*TL)-1] = col;
 }
 

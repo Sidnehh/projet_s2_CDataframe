@@ -21,9 +21,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73ddcb3-4814-4204-a4cd-78b92205e06d" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/projet_s2_CDataframe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/projet_s2_CDataframe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FonctionsCDataFrame.c" beforeDir="false" afterPath="$PROJECT_DIR$/FonctionsCDataFrame.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FonctionsCDataFrame.h" beforeDir="false" afterPath="$PROJECT_DIR$/FonctionsCDataFrame.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FonctionsColonnes.c" beforeDir="false" afterPath="$PROJECT_DIR$/FonctionsColonnes.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FonctionsColonnes.h" beforeDir="false" afterPath="$PROJECT_DIR$/FonctionsColonnes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsCDataFrame.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsCDataFrame.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsColonnes.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsColonnes.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/main.c.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/projet_s2_CDataframe.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/projet_s2_CDataframe.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +124,14 @@
       <workItem from="1713274883505" duration="9509000" />
       <workItem from="1713384335448" duration="2000" />
       <workItem from="1713616645231" duration="1124000" />
+      <workItem from="1715003318664" duration="94000" />
+      <workItem from="1715787117701" duration="1480000" />
+      <workItem from="1715788624641" duration="1000" />
+      <workItem from="1715788726954" duration="548000" />
+      <workItem from="1715789381176" duration="408000" />
+      <workItem from="1715789959820" duration="3789000" />
+      <workItem from="1716047630384" duration="2989000" />
+      <workItem from="1716132549705" duration="5539000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />

@@ -47,6 +47,8 @@ int Nb_Superior(COLUMN* col, int val);
 int Nb_Inferior(COLUMN* col, int val);
 //fonction qui remplit une colonne par saisie
 void fill_column(COLUMN* col);
+//fonction qui convertit n'importe quel type en string
+void convert_value(COLUMN *col, unsigned long long int i, char *str, int size);
 
 //Partie 5.1
 
