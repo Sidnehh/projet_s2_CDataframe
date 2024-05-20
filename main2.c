@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <malloc.h>
 #include "listec.h"
-
+ 
 void menu()
 {
     CDATAFRAME *cdf = NULL;
     int size;
     int choice;
     char *titre = (char *) malloc(100 * sizeof(char));
-    char *col_title = (char *) malloc(100 * sizeof(char));
+    char *col_title = (char *) malloc(100 * sizeof(char)); 
     COLUMN *column;
     unsigned int index;
     ENUM_TYPE *cdftype = NULL;
@@ -20,6 +20,7 @@ void menu()
         printf("3. Ajouter une colonne\n");
         printf("4. Supprimer une colonne\n");
         printf("5. Obtenir le nombre de colonnes\n");
+        printf("6. Ajouter une valeur dans une colonne\n");
         printf("6. Supprimer le dataframe\n");
         printf("0. Quitter\n");
         printf("Entrez votre choix: ");
