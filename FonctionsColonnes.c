@@ -71,12 +71,14 @@ CDATAFRAME *create_cdataframe(ENUM_TYPE *cdftype, int size)
                 printf("Erreur d'allocation");
                 return NULL;
             }
-            printf("Saisir le titre de la colonne %d", i + 1);
-            gets(titre);
-            printf("Saisir le type de la colonne %d", i + 1);
-            scanf(" %d", &type);
+            printf("Saisir le titre de la colonne %d\n", i + 1);
+            scanf(" %s", titre);
+            printf("Saisir le type de la colonne %d\n", i + 1);
             printf("1 : entier naturel\n2 : entier\n3 : caractere\n4 : decimal\n5 : chaine de caracteres\n");
+            scanf(" %d", &type);
             COLUMN *column = create_column(type, titre);
+            fill_column(column);
+
             LNODE *node = creer_lnode(column);
 
             if (column == NULL || node == NULL) {
@@ -102,9 +104,21 @@ CDATAFRAME *create_cdataframe(ENUM_TYPE *cdftype, int size)
     return cdf;
 }
 
-void delete_column(COLUMN**column)
+void delete_column(COLUMN **col)
 {
+    if ((*col)->data != NULL)
+    {
+        free((*col)->data);
+        (*col)->data = NULL;
+    }
+    if((*col)->index != NULL)
+    {
+        free((*col)->index);
+        (*col)->index = NULL;
+    }
 
+    free(*col);
+    *col = NULL;
 }
 
 void delete_cdataframe(CDATAFRAME** cdf)
@@ -133,8 +147,8 @@ void print_cdf(CDATAFRAME* cdf)
         return;
     }
     int choice;
-    printf("Voulez vous afficher le Cdataframe dans le sens de remplissage (1) ou inverse (0) ?");
-    scanf(&choice);
+    printf("Voulez vous afficher le Cdataframe dans le sens de remplissage (1) ou inverse (0) ?\n");
+    scanf(" %d", &choice);
     switch (choice) {
         case 0 :
         {
@@ -303,6 +317,7 @@ void print_col(COLUMN* col)
         convert_value(col, i, str, col->taille_logique);
         printf("[%d] %s \n", i, str);
     }
+    printf("\n");
 }
 
 int insert_value(COLUMN* col, void* value)
