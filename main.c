@@ -30,7 +30,6 @@ void menu()
         {
             case 1 :
             {
-                int type;
                 printf("Entrez le nombre de colonnes:\n ");
                 scanf(" %d", &size);
                 cdf = create_cdataframe(cdftype, size);
@@ -59,7 +58,7 @@ void menu()
 
             case 4:
                 printf("Saisir le titre de la colonne a supprimer: ");
-                gets(titre);
+                scanf("%s", titre);
                 delete_c(cdf, titre);
                 break;
 

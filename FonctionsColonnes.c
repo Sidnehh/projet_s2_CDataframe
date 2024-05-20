@@ -157,6 +157,7 @@ void print_cdf(CDATAFRAME* cdf)
             {
                 print_col(current->data);
                 current = current->next;
+                printf("\n");
             }
             break;
         }
@@ -167,6 +168,7 @@ void print_cdf(CDATAFRAME* cdf)
             {
                 print_col(current->data);
                 current = current -> next;
+                printf("\n");
             }
             break;
         }
@@ -404,7 +406,6 @@ void fill_column(COLUMN* col)
     for(i=0; i<n;i++)
     {
         printf("Valeur %d :\n", i);
-        printf("%d", col->type);
         switch(col->type)
         {
             case UINT:
