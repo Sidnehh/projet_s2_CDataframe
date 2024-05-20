@@ -1,6 +1,4 @@
-//
-// Created by Sidney (Ingénieur) on 20/05/2024.
-//
+
 
 #ifndef PROJET_S2_CDATAFRAME_FONCTIONSCDATAFRAME_H_H
 #define PROJET_S2_CDATAFRAME_FONCTIONSCDATAFRAME_H_H
