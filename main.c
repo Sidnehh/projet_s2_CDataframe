@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <malloc.h>
-#include "listec.h"
+#include "FonctionsColonnes.h"
 
 void menu()
 {
@@ -76,41 +76,20 @@ void menu()
                 break;
 
             case 3:
+            {
+                int type;
                 printf("Entrez le titre de la nouvelle colonne: ");
                 gets(col_title);
                 printf("Saisir le type de la nouvelle colonne (1: UINT, 2: INT, 3: CHAR, 4: FLOAT, 5: DOUBLE, 6: STRING):  ");
-                int type;
                 scanf(" %d", &type);
-                ENUM_TYPE type_col;
-                switch (type) {
-                    case 1:
-                        type_col = UINT;
-                        break;
-                    case 2:
-                        type_col = INT;
-                        break;
-                    case 3:
-                        type_col = CHAR;
-                        break;
-                    case 4:
-                        type_col = FLOAT;
-                        break;
-                    case 5:
-                        type_col = DOUBLE;
-                        break;
-                    case 6:
-                        type_col = STRING;
-                        break;
-                    default:
-                        printf("Type invalide, colonne définie à INT par défaut\n");
-                        type_col = INT;
-                        break;
-                }
-                COLUMN *new_col = create_column(type_col, col_title);
+
+                COLUMN *new_col = create_column(type, col_title);
+                fill_column(new_col);
                 printf("la colonne a bien été créée indiquez l'indice où insérer la colonne: ");
                 scanf(" %d", &index);
                 ajouter_column(cdf, new_col, index);
                 break;
+            }
 
             case 4:
                 printf("Saisir le titre de la colonne à supprimer: ");
