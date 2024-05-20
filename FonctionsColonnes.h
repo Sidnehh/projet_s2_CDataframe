@@ -1,12 +1,18 @@
 #ifndef PROJET_S2_CDATAFRAME_FONCTIONSCOLONNES_H
 #define PROJET_S2_CDATAFRAME_FONCTIONSCOLONNES_H
 
+typedef enum {
+    INT,
+    CHAR,
+    FLOAT,
+}ENUM_TYPE;
 typedef struct
 {
     char *titre;
     int *tableau_data;
     int taille_logique;
     int taille_physique;
+    ENUM_TYPE type;
     // partie 2 Un Cdataframe presque-parfait
     unsigned long long *index; // Ajouté pour le tri
     int valid_index;           // Ajouté pour gérer l'état de tri

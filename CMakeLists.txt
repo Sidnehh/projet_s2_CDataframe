@@ -8,4 +8,7 @@ add_executable(projet_s2_CDataframe
         FonctionsColonnes.h
         FonctionsColonnes.c
         FonctionsCDataFrame.h
-        FonctionsCDataFrame.c)
+        FonctionsCDataFrame.c
+        listec.c
+        listec.h
+        main2.c)
