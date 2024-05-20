@@ -167,7 +167,7 @@ void print_cdf(CDATAFRAME* cdf)
             while (current !=NULL)
             {
                 print_col(current->data);
-                current = current -> next;
+                current = current -> prev;
                 printf("\n");
             }
             break;
@@ -326,7 +326,7 @@ void print_col(COLUMN* col)
     {
         for(i=0;i<n;i++)
         {
-            printf("%s\n", col->data[i]);
+            printf("[%d] %s\n", i, col->data[i]);
         }
     }
 }
@@ -390,19 +390,26 @@ int insert_value(COLUMN* col, void* value)
             break;
 
         default:
-            printf("Error : la valeur n'a pas pu être inseree, saisie invalide \n");
-            break;
+            printf("Erreur : Type inexistant \n");
+            return 0;
     }
     col->taille_logique++;
     return 1;
 }
 
-void fill_column(COLUMN* col)
+int fill_column(COLUMN* col)
 {
     int i, n;
+    char ver[50];
     void* ptr = NULL;
     printf("Entrez le nombre de valeurs a inserer : \n");
-    scanf(" %d", &n);
+    scanf(" %s", ver);
+    while(is_digit(ver) != 1)
+    {
+        printf("Saisie invalide, veuillez entrer un nombre\n");
+        scanf(" %s", ver);
+    }
+    n = convert_to_int(ver);
     for(i=0; i<n;i++)
     {
         printf("Valeur %d :\n", i);
@@ -445,16 +452,37 @@ void fill_column(COLUMN* col)
             }
             case STRING:
             {
-                printf("STRING\n");
-                char** temp = (char**) malloc(sizeof(char**));
-                scanf(" %s", *temp);
-                ptr = &temp;
+                char* temp = (char*) malloc(100 * sizeof(char));
+                scanf("%s", temp);
+                ptr = temp;
                 break;
             }
             default:
-                printf("Error: Conversion Failed");
-                break;
+                printf("Erreur: Type inexistant");
+                return 0;
         }
         insert_value(col, ptr);
     }
+    return 1;
+}
+
+int is_digit(char* str)
+{
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] < '0' || str[i] > '9')
+            return 0;
+    }
+    return 1;
+}
+
+int convert_to_int(char *str)
+{
+    int i = 0;
+    int val = 0;
+    while (str[i] != '\0') {
+        val = val * 10 + (*str - '0');
+        i++;
+    }
+    return val;
 }

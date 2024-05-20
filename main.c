@@ -5,17 +5,18 @@
 void menu()
 {
     CDATAFRAME *cdf = NULL;
+    char ver[50];
     int size;
     int choice;
     int type;
     char *titre = (char *) malloc(100 * sizeof(char));
     char *col_title = (char *) malloc(100 * sizeof(char));
-    COLUMN *column;
     unsigned int index;
     ENUM_TYPE *cdftype = NULL;
 
     do {
-        printf("\n Menu:\n");
+        printf("-----------------------------------------------\n");
+        printf("Menu:\n");
         printf("1. Creer un dataframe\n");
         printf("2. Afficher le dataframe\n");
         printf("3. Ajouter une colonne\n");
@@ -23,6 +24,7 @@ void menu()
         printf("5. Obtenir le nombre de colonnes\n");
         printf("6. Supprimer le dataframe\n");
         printf("0. Quitter\n");
+        printf("-----------------------------------------------\n");
         printf("Entrez votre choix: \n");
         scanf(" %d", &choice);
 
@@ -31,7 +33,13 @@ void menu()
             case 1 :
             {
                 printf("Entrez le nombre de colonnes:\n ");
-                scanf(" %d", &size);
+                scanf(" %s", ver);
+                while(is_digit(ver) != 1)
+                {
+                    printf("Saisie invalide, veuillez entrer un nombre\n");
+                    scanf(" %s", ver);
+                }
+                size = convert_to_int(ver);
                 cdf = create_cdataframe(cdftype, size);
                 if (cdf != NULL)
                     printf("Le cdataframe a bien ete cree \n");
@@ -70,19 +78,20 @@ void menu()
                 delete_cdataframe(&cdf);
                 printf("Dataframe supprime\n");
                 break;
+
             case 0 :
                 printf("Merci de votre visite ! ");
                 delete_cdataframe(&cdf);
                 free(col_title);
                 free(titre);
                 break;
+
             default:
                 printf("Choix invalide, reessayez \n");
                 break;
 
         }
     } while (choice != 0);
-
 }
 
 int main() {

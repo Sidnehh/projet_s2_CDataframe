@@ -82,12 +82,15 @@ void convert_value(COLUMN *col, unsigned long long int i, char *str, int size);
 void print_col(COLUMN* col);
 //fonction qui affiche une colonne
 
-void fill_column(COLUMN* col);
+int fill_column(COLUMN* col);
 //fonction qui remplit une colonne de manière interactive
 
 int insert_value(COLUMN* col, void* value);
 //fonction qui insère une valeur de tout type dans une colomne grâce à un pointeur void, retourne 1 si l'insertion
 //bien déroulée, 0 sinon
 
+int is_digit(char*);
+int convert_to_int(char *str);
+//fonctions qui servent à vérifier les saisies utilisateur
 
 #endif //TEST__LISTE_CHAÎNÉ_H
