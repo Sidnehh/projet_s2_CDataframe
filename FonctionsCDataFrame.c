@@ -100,45 +100,87 @@ void delete_cdataframe(CDATAFRAME** cdf)
 }
 
 // Fonction qui affiche le dataframe
-void print_cdf(CDATAFRAME* cdf)
+void print_cdf(CDATAFRAME* cdf, int size)
 {
-    if (cdf == NULL)
+    if (cdf== NULL)
     {
         printf("le cdata est deja vide\n");
         return;
     }
     int choice;
-    printf("Voulez vous afficher le Cdataframe dans le sens de remplissage (1) ou inverse (0) ?\n");
+    printf("Voulez vous afficher le Cdataframe dans le sens de remplissage (1) / inverse (0) / tableur (2) ?\n");
     scanf(" %d", &choice);
     switch (choice) {
-        case 0:
+        case 0 :
         {
-            LNODE *current = cdf->head;
-            while (current != NULL)
+            LNODE *current = cdf-> head;
+            while (current !=NULL)
             {
-                print_col(current->data); // Affichage de la colonne
-                current = current->next; // Passage à la colonne suivante
+                print_col(current->data);
+                current = current->next;
                 printf("\n");
             }
             break;
         }
-        case 1:
+        case 1 :
         {
-            LNODE *current = cdf->tail;
-            while (current != NULL)
+            LNODE *current = cdf-> tail;
+            while (current !=NULL)
             {
-                print_col(current->data); // Affichage de la colonne
-                current = current->prev; // Passage à la colonne précédente
+                print_col(current->data);
+                current = current -> prev;
                 printf("\n");
             }
             break;
+        }
+        case 2 :
+        {
+            int i;
+            unsigned int width;
+            unsigned int gap;
+            unsigned int gap_left;
+            unsigned int gap_right;
+            char* str = (char*) malloc(50*sizeof(char));
+            LNODE *current = cdf-> head;
+            while(current != NULL)
+            {
+                printf("| %s | ", current->data->titre);
+                current = current->next;
+            }
+            printf("\n");
+            current = cdf->head;
+            for(i=0; i<size; i++)
+            {
+                while(current != NULL)
+                {
+                    width = strlen(current->data->titre);
+                    if((current->data->taille_logique) < i)
+                    {
+                        printf("| %*s | ", width, "");
+                        current = current -> next;
+                        break;
+                    }
+                    convert_value(current->data, i, str, 50);
+                    gap = strlen(str);
+                    if (gap >= width)
+                        printf("| %s | ", str);
+                    else
+                    {
+                        gap_left = (width-gap)/2;
+                        gap_right = width-gap-gap_left;
+                        printf("| %*s%s%*s | ", gap_left, "", str, gap_right, "");
+                    }
+                    current = current -> next;
+                }
+                current = cdf->head;
+                printf("\n");
+            }
         }
         default:
             printf("Choix invalide\n");
             break;
     }
 }
-
 // Fonction qui supprime une colonne d'un dataframe à partir de son titre
 void delete_c(CDATAFRAME *cdf, char *titre)
 {
