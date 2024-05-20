@@ -48,7 +48,7 @@ void menu()
             }
 
             case 2:
-                print_cdf(cdf);
+                print_cdf(cdf, size);
                 break;
 
             case 3:

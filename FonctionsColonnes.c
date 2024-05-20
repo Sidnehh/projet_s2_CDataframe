@@ -173,7 +173,7 @@ int fill_column(COLUMN* col)
     int i, n;
     char ver[50];
     void* ptr = NULL;
-    printf("Entrez le nombre de valeurs à insérer : \n");
+    printf("Entrez le nombre de valeurs a inserer : \n");
     scanf(" %s", ver); // Lecture du nombre de valeurs à insérer
     while(is_digit(ver) != 1)
     {

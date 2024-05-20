@@ -58,7 +58,7 @@ void delete_cdataframe(CDATAFRAME** cdf);
 void ajouter_column( CDATAFRAME*cdf, COLUMN*column, unsigned int index);
 // fonction qui permet d'ajouter un noeud/ colonne dans le cdataframe (specifier l'indice)
 
-void print_cdf(CDATAFRAME* cdf);
+void print_cdf(CDATAFRAME* cdf, int size);
 //fonction qui affiche un cdataframe
 
 int get_cdataframe_cols_size(CDATAFRAME *cdf);
@@ -73,7 +73,7 @@ void delete_cdataframe(CDATAFRAME** cdf);
 void ajouter_column( CDATAFRAME*cdf, COLUMN*column, unsigned int index);
 // fonction qui permet d'ajouter un noeud/ colonne dans le cdataframe (specifier l'indice)
 
-void print_cdf(CDATAFRAME* cdf);
+void print_cdf(CDATAFRAME* cdf, int size);
 //fonction qui affiche un cdataframe
 
 int get_cdataframe_cols_size(CDATAFRAME *cdf);
