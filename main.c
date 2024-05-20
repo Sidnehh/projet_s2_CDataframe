@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <malloc.h>
 #include "FonctionsColonnes.h"
+#include "FonctionsCDataFrame.h"
 
 void menu()
 {
