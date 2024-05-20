@@ -140,6 +140,3 @@ void fill_column(COLUMN* col)
 
 
 
-//PARTIE 5.1
-
-//PARTIE 6
