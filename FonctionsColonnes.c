@@ -74,9 +74,9 @@ CDATAFRAME *create_cdataframe(ENUM_TYPE *cdftype, int size)
             printf("Saisir le titre de la colonne %d\n", i + 1);
             scanf(" %s", titre);
             printf("Saisir le type de la colonne %d\n", i + 1);
-            printf("1 : entier naturel\n2 : entier\n3 : caractere\n4 : decimal\n5 : chaine de caracteres\n");
+            printf("1 : entier naturel\n2 : entier\n3 : caractere\n4 : decimal\n5 : flottant\n6: chaine de caracteres\n");
             scanf(" %d", &type);
-            COLUMN *column = create_column(type, titre);
+            COLUMN *column = create_column(type-1, titre);
             fill_column(column);
 
             LNODE *node = creer_lnode(column);
@@ -143,7 +143,7 @@ void print_cdf(CDATAFRAME* cdf)
 {
     if (cdf== NULL)
     {
-        printf("le cdata est déjà vide\n");
+        printf("le cdata est deja vide\n");
         return;
     }
     int choice;
@@ -211,7 +211,7 @@ void delete_c (CDATAFRAME *cdf, char *titre)
 
     delete_column(&current->data);
     free(current);
-    printf("Colonne %s supprimée avec succès\n", titre);
+    printf("Colonne %s supprimee avec succès\n", titre);
 
 }
 
@@ -311,13 +311,22 @@ void print_col(COLUMN* col)
     int n = col->taille_logique;
     int i;
     printf("%s :\n", col->titre);
-    for(i=0;i<n;i++)
+    if(col->type != STRING)
     {
-        char str[10];
-        convert_value(col, i, str, col->taille_logique);
-        printf("[%d] %s \n", i, str);
+        for(i=0;i<n;i++)
+        {
+            char str[10];
+            convert_value(col, i, str, 50);
+            printf("[%d] %s \n", i, str);
+        }
     }
-    printf("\n");
+    else
+    {
+        for(i=0;i<n;i++)
+        {
+            printf("%s\n", col->data[i]);
+        }
+    }
 }
 
 int insert_value(COLUMN* col, void* value)
@@ -379,7 +388,7 @@ int insert_value(COLUMN* col, void* value)
             break;
 
         default:
-            printf("Error : la valeur n'a pas pu être insérée, saisie invalide \n");
+            printf("Error : la valeur n'a pas pu être inseree, saisie invalide \n");
             break;
     }
     col->taille_logique++;
@@ -395,6 +404,7 @@ void fill_column(COLUMN* col)
     for(i=0; i<n;i++)
     {
         printf("Valeur %d :\n", i);
+        printf("%d", col->type);
         switch(col->type)
         {
             case UINT:
@@ -407,7 +417,7 @@ void fill_column(COLUMN* col)
             case INT:
             {
                 int* temp = (int*) malloc(sizeof(int));
-                scanf("  %d", temp);
+                scanf(" %d", temp);
                 ptr = temp;
                 break;
             }
@@ -434,12 +444,12 @@ void fill_column(COLUMN* col)
             }
             case STRING:
             {
+                printf("STRING\n");
                 char** temp = (char**) malloc(sizeof(char**));
                 scanf(" %s", *temp);
                 ptr = &temp;
                 break;
             }
-
             default:
                 printf("Error: Conversion Failed");
                 break;

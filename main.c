@@ -7,6 +7,7 @@ void menu()
     CDATAFRAME *cdf = NULL;
     int size;
     int choice;
+    int type;
     char *titre = (char *) malloc(100 * sizeof(char));
     char *col_title = (char *) malloc(100 * sizeof(char));
     COLUMN *column;
@@ -44,14 +45,13 @@ void menu()
 
             case 3:
             {
-                int type;
-                printf("Entrez le titre de la nouvelle colonne: ");
-                gets(col_title);
+                printf("Entrez le titre de la nouvelle colonne: \n");
+                scanf("%s", titre);
                 printf("1 : entier naturel\n2 : entier\n3 : caractere\n4 : decimal\n5 : chaine de caracteres\n");
                 scanf(" %d", &type);
                 COLUMN *new_col = create_column(type, col_title);
                 fill_column(new_col);
-                printf("la colonne a bien ete creee, indiquez l'indice où inserer la colonne: ");
+                printf("la colonne a bien ete creee, indiquez l'indice ou inserer la colonne: ");
                 scanf(" %d", &index);
                 ajouter_column(cdf, new_col, index);
                 break;
