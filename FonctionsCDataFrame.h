@@ -91,5 +91,4 @@ int insert_value(COLUMN* col, void* value);
 //fonction qui insère une valeur de tout type dans une colomne grâce à un pointeur void, retourne 1 si l'insertion
 //bien déroulée, 0 sinon
 
-
 #endif //PROJET_S2_CDATAFRAME_FONCTIONSCDATAFRAME_H_H
