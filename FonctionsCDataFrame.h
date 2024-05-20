@@ -8,7 +8,7 @@ COLUMN** create_empty_cdataframe(int nb);
 void fill_cdataframe(COLUMN** cdf, int TL);
 // fonction qui remplit le cdataframe
 int maxcol_cdataframe(COLUMN** cdf, int TL);
-// fonction qui 
+// fonction qui affiche la colonne avec le plus d'éléments
 void print_cdataframe(COLUMN** cdf, int TL);
 // fonction qui affiche le cdataframe
 void print_lines_cdataframe(COLUMN** cdf, int TL, int nlines);
