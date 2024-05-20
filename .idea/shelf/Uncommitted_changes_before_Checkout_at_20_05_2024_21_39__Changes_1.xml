@@ -1,0 +1,34 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_20_05_2024_21_39_[Changes]1" date="1716233973878" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_05_2024_21_39_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 20/05/2024 21:39 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsColonnes.c.obj" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsColonnes.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_05_2024_21_39_[Changes]1/FonctionsColonnes.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/.ninja_deps" />
+    <option name="AFTER_PATH" value="cmake-build-debug/.ninja_deps" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_05_2024_21_39_[Changes]1/.ninja_deps" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/main.c.obj" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/main.c.obj" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_05_2024_21_39_[Changes]1/main.c.obj" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_05_2024_21_39_[Changes]1/CMakeDetermineCompilerABI_C.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/projet_s2_CDataframe.dir/FonctionsCDataFrame.c.obj" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe" />
+    <option name="AFTER_PATH" value="cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_05_2024_21_39_[Changes]1/a.exe" />
+  </binary>
+</changelist>
