@@ -7,12 +7,7 @@ typedef struct
     int *tableau_data;
     int taille_logique;
     int taille_physique;
-    // partie 2 Un Cdataframe presque-parfait
-    unsigned long long *index; // Ajouté pour le tri
-    int valid_index;           // Ajouté pour gérer l'état de tri
-    int sort_dir;              // Ajouté pour la direction du tri
-
-} COLUMN;
+} COLUMN; // structure d'une colonne
 
 COLUMN *create_column(char* titre);
 // fonction qui crée une colonne vide
