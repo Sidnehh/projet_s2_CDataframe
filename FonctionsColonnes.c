@@ -84,7 +84,7 @@ void print_col(COLUMN* col)
     {
         for(i = 0; i < n; i++)
         {
-            char str[50]; // Tampon pour la conversion
+            char str[50];
             convert_value(col, i, str, 50); // Conversion de la valeur en chaîne
             printf("[%d] %s \n", i, str); // Affichage de la valeur convertie
         }
