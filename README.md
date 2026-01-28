@@ -1,7 +1,5 @@
 # projet_s2_CDataframe
-Projet Semestre 2 : CDataframe, SANGLIER Sidney &amp; EL HASSANI Sabrina
-
-Lien du Projet Github : https://github.com/Sidnehh/projet_s2_CDataframe/
+Projet CDataframe, EL HASSANI Sabrina & SANGLIER Sidney 
 
 Description du projet :
   L'idée du projet est d'implémenter une librairie de fonctions en C permettant à un utilisateur de manipuler un "DataFrame", une structure de données sous forme de tableau
